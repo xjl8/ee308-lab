@@ -1,0 +1,125 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <fstream>
+#include <algorithm>
+
+
+using namespace std;
+
+const string keywordlibrary[32] = {"auto", "break", "case", "char", "const", "continue", "default", "do", "double", "else",
+                            "enum", "extern", "float", "for", "goto", "if", "int", "long", "register", "return",
+                            "short", "signed", "sizeof", "static", "struct", "switch", "typedef", "union", "unsigned", "void", "volatile", "while"};
+
+
+void Level1(vector<string> data) {
+    int total_num = 0;
+    for (int i = 0; i < data.size(); i++) {
+    	
+        vector<int> data1;
+        for (int j = 0; j < 32; j++) {
+        	
+            int address = data[i].find(keywordlibrary[j]);
+            if (address != data[i].npos) {
+                if (find(data1.begin(), data1.end(), address) == data1.end()) {
+                    data1.push_back(address);
+                    total_num++;
+                }
+            }
+        }
+    }
+    
+    cout << "total num: " << total_num << endl;
+}
+
+
+void Level2(vector<string> data) {
+    int total_switch = 0;
+    vector<int> count_case;
+    for (int i = 0; i < data.size(); i++) {
+        int address = data[i].find("switch");
+        if (address != data[i].npos) {
+            total_switch++;
+        }
+    }
+    cout << "switch num:" << total_switch << endl;
+   
+    for (int i = 0; i < data.size(); i++) {
+        int total_case = 0;
+        int position1 = data[i].find("switch");
+        if (position1 != data[i].npos) {
+            for (int j = i + 1; j < data.size(); j++) {
+                int position2 = data[j].find("case");
+                if (position2 != data[j].npos) {
+                    total_case++;
+                }
+                position2 = data[j].find("default");
+                if (position2 != data[j].npos) {
+                    count_case.push_back(total_case);
+                    i = j+1;
+                    break;
+                }
+            }
+        }
+    }
+    for (int i = 0; i < count_case.size(); i++) {
+        cout << "case num: " << count_case[i]<<endl;
+    }
+}
+
+
+
+
+
+int Level3(vector<string> data) {
+   int count_if_else = 0;
+   for (int i = 0; i < data.size(); i++) {
+        
+       if (data[i].find("else") != data[i].npos && data[i+1].find("if") == data[i+1].npos ||
+           data[i].find("else{") != data[i].npos) {
+            count_if_else++;
+        }
+    }
+    return count_if_else;
+}
+
+
+int Level4(vector<string> data) {
+    int count_if_else_if_else = 0;
+    for (int i = 1; i < data.size(); i++) {
+        
+        if ((data[i].find("if") != data[i].npos && data[i-1].find("else") == data[i-1].npos)||
+		 (data[i].find("if") != data[i].npos && (data[i-1].find("else{") != data[i-1].npos))) {
+            for (int j = i + 1; j < data.size(); j++) {
+               
+                if (data[j].find("else") != data[j].npos && data[j+1].find("if") != data[j+1].npos &&
+                    data[j].find("else{") == data[j].npos) {
+                    i = j+1;
+                    count_if_else_if_else++;
+                    break;
+                }
+            }
+        }
+    }
+    return count_if_else_if_else;
+}
+int main() {
+    
+    string s;
+    vector<string> data;
+    ifstream infile;
+    infile.open("ee308lab2test.cpp");
+    while (infile >> s) {
+        data.push_back(s);
+    }
+    infile.close(); 
+    Level1(data);    
+    Level2(data);
+    cout << "if-else num: " << Level3(data)-Level4(data) << endl;
+          
+    cout << "if-elseif-else num: " << Level4(data) << endl;
+            
+    return 0;
+           
+    }
+   
