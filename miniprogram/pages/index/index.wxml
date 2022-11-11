@@ -1,0 +1,15 @@
+<!--pages/index/index.wxml-->
+<view class="box">
+    <!-- 背景图片 -->
+    <image class="background" src="../../images/index_background.jpg"></image>
+    <!-- 单机模式按钮 -->
+    <navigator url="../room/room">
+        <button id="img" style="width: 350rpx; position: relative; left: 1rpx; top: 274rpx" class="button1">
+            <image id="img" mode="aspectFit" class="cake1" src="../../images/cake_icon.jpg" style="position: fixed; left: 226rpx; top: 513rpx"></image>单机模式
+        </button>
+    </navigator>
+    <!-- 联机模式按钮 -->
+    <button id="img" style="width: 350rpx; position: relative; left: 1rpx; top: 284rpx" class="button2">
+        <image id="img" mode="aspectFit" class="cake2" src="../../images/cake_icon.jpg" style="position: fixed; left: 225rpx; top: 715rpx"></image>联机模式
+    </button>
+</view>

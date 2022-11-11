@@ -1,0 +1,6 @@
+<!--pages/firstpage/firstpage.wxml-->
+<view>
+<icon type="warn" size="93"></icon>
+<button type="primary" open-type="getUserInfo">授权登录</button>
+<button type="default">退出</button>
+</view>

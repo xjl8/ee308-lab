@@ -1,0 +1,26 @@
+/* pages/rank/rank.wxss */
+
+page {
+    background-color: #EAF0FB;
+}
+
+.head {
+    width: 100%;
+    display: flex;
+    font-size: 22rpx;
+}
+
+.head text {
+    margin: 3rpx;
+}
+
+.line {
+    width: 100%;
+    background-color: black;
+    height: 1rpx;
+}
+
+.font {
+    margin-left: 25%;
+    margin-top: 5%;
+}

@@ -1,0 +1,8 @@
+<!--pages/rank/rank.wxml-->
+<view>
+  <image src="../../images/rabbit.jpg" mode="widthFix" style="width: 750rpx; height: 662rpx; display: inline-block; box-sizing: border-box"></image>
+</view>
+<!-- 博饼结果列表显示 -->
+<view wx:for="{{playerlist}}" wx:for-item="item" class="font">
+  {{item}}
+</view>

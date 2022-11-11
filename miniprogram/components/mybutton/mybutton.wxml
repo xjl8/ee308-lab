@@ -1,0 +1,5 @@
+<!--components/mybutton/mybutton.wxml-->
+<view>
+<image src="../../images/cake_icon.jpg"></image>
+<text>{{}}</text>
+</view>

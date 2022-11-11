@@ -1,0 +1,72 @@
+/* pages/index/index.wxss */
+
+.box {
+  height: 100%;
+  width: 100%;
+}
+
+.flex-wrp {
+  margin-top: 10rpx;
+  display: flex;
+}
+
+/* 背景图片 */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  z-index: -1;
+}
+
+/* 单机模式按钮设置 */
+.button1 {
+  margin-top: 35%;
+  width: auto;
+  height: 40px;
+  background-color: rgba(255, 255, 255);
+  color: rgb(74, 80, 158);
+  text-align: center;
+  z-index: 0;
+  border-radius: 50px;
+  padding-left: 9%;
+  padding-right: 0%
+}
+
+/* 联机模式按钮设置 */
+.button2 {
+  margin-top: 15%;
+  width: auto;
+  height: 40px;
+  background-color: rgba(255, 255, 255);
+  color: rgb(74, 80, 158);
+  text-align: center;
+  z-index: 0;
+  border-radius: 50px;
+  padding-left: 9%;
+  padding-right: 0%
+}
+
+/* cakex 图标设置 */
+.cake1 {
+  position: fixed;
+  z-index: 0;
+  right: 57.5%;
+  bottom: 66.5%;
+  width: 10%;
+  height: 10%;
+}
+
+.cake2 {
+  position: fixed;
+  z-index: 0;
+  right: 57.5%;
+  bottom: 47.1%;
+  width: 10%;
+  height: 10%;
+}
+
+/* 按钮透明度 */
+#img {
+  opacity: 70%;
+}

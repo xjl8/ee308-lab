@@ -1,0 +1,8 @@
+/* pages/firstpage/firstpage.wxss */
+icon{
+    margin-top: 20%;
+    margin-left: 35%;
+}
+button{
+    font-weight: lighter;
+}

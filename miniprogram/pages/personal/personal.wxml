@@ -1,0 +1,17 @@
+<!--pages/personal/personal.wxml-->
+<!-- 用户登录 -->
+<view class="user">
+  <button open-type="getUserInfo" bindgetuserinfo="getuserinfo">
+    <view class="userinfo">
+      <!-- 用户头像 -->
+      <image class="userinfo-avatar" src="{{avatarurl}}" mode="scaleToFill"></image>
+      <!-- 用户名 -->
+      <view class="userinfo-nickname">{{nickname}}</view>
+    </view>
+  </button>
+</view>
+<!-- 用户反馈按钮 -->
+<button open-type="feedback" style="width:300rpx" class="button1">用户反馈</button>
+<!-- 退出登录按钮 -->
+<button style="width:300rpx" class="button2" bindtap="logout">退出登录</button>
+

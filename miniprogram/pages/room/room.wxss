@@ -1,0 +1,85 @@
+/* pages/room/room.wxss */
+
+.background {
+  position: fixed;
+  margin-top: 17%;
+  width: 100%;
+  height: 90%;
+  background-size: 100%;
+  z-index: -1;
+}
+
+.flex-wrp {
+  display: flex;
+  width: 100%;
+  height: 150rpx;
+  margin-left: 0%;
+  margin-right: 0%;
+  /* border:4rpx solid #bdaaf0; */
+  border-radius: 10rpx;
+  background-color: rgb(250, 255, 240);
+  display: flex;
+  flex-direction: row;
+}
+
+/* .top .b 设置顶部图标 */
+.top {
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.b {
+  font-size: 1%;
+  flex: inherit;
+  color: rgb(66, 214, 194);
+}
+
+/* 轮次提醒文字设置 */
+.textstyle1 {
+  font-size: 10%;
+  color: ivory;
+  margin-top: 72rpx;
+  text-align: center;
+}
+
+/* 人数次数提醒文字设置 */
+.textstyle2 {
+  font-size: 100%;
+  color: ivory;
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+/* 轮播图 */
+swiper {
+  width: 100%;
+  height: calc(100vw * 346 / 1016);
+}
+
+.nav {
+  position: relative;
+  top: 10%;
+  height: 100rpx;
+}
+
+/* 开始按钮设置 */
+.begin {
+  margin-top: 33%;
+  width: auto;
+  height: 40px;
+  background-color: rgb(34, 177, 105);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  z-index: 0;
+  border-radius: 50px;
+  padding-left: 0%;
+  padding-right: 0%
+}
+
+/* 规则设置 */
+.guize {
+  height: 620rpx;
+  position: relative;
+  right: 35rpx;
+}

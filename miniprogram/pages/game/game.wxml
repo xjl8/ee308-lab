@@ -1,0 +1,30 @@
+<!--pages/game/game.wxml-->
+<!-- 结果弹窗 -->
+<page-container class="tanchuang" show="{{retshow}}" overlay-style="z-index:99" custom-style="z-index:999">
+    <image id="ret" src="../../images/result.png">
+        <text id="t1">{{tip1}}</text>
+        <text id="t2">{{tip2}}</text>
+    </image>
+</page-container>
+<!-- 博饼主体 -->
+<view class="container">
+    <!-- 博饼碗 -->
+    <view class="main">
+        <view class="bowl" id="dicebox">
+            <image class="bg_img" src="../../images/port.jpg" />
+        </view>
+    </view>
+    <!-- 提示语 -->
+    <text>{{str1}}</text>
+    <!-- 博饼按钮 -->
+    <view class="btn-box">
+        <button style="width: 250rpx; position: relative; left: -1rpx; top: 0rpx" class="btn" bindtap="begin" disabled="{{buttype}}" type="default">投骰子</button>
+    </view>
+    <!-- 六个骰子 -->
+    <image id="redpacket0" src="{{dicepath1}}" mode="aspectFit" hidden="{{tap}}"></image>
+    <image id="redpacket1" src="{{dicepath2}}" mode="aspectFit" hidden="{{tap}}"></image>
+    <image id="redpacket2" src="{{dicepath3}}" mode="aspectFit" hidden="{{tap}}"></image>
+    <image id="redpacket3" src="{{dicepath4}}" mode="aspectFit" hidden="{{tap}}"></image>
+    <image id="redpacket4" src="{{dicepath5}}" mode="aspectFit" hidden="{{tap}}"></image>
+    <image id="redpacket5" src="{{dicepath6}}" mode="aspectFit" hidden="{{tap}}"></image>
+</view>

@@ -1,0 +1,51 @@
+<!--pages/room/room.wxml-->
+<!-- 背景图片 -->
+<image class="background" src="../../images/background.png"></image>
+<!-- 规则弹窗 -->
+<page-container class="tanchuang" show="{{rule_show}}" overlay-style="z-index:99" custom-style="z-index:999">
+  <image src="../../images/rulers.jpg" mode="heightFix" class="guize"></image>
+</page-container>
+<!-- 顶部图标 -->
+<view class="flex-wrp" style="flex-direction:row">
+  <button class="b" bindtap="goresult">
+    <image class="top" src="../../images/颁奖.png"></image>结果
+  </button>
+  <button class="b" bindtap="gosetting">
+    <image class="top" src="../../images/管理设置.png"></image>设置
+  </button>
+  <button class="b">
+    <image class="top" src="../../images/推荐有奖.png" bindtap="gogift"></image>奖品
+  </button>
+  <button class="b">
+    <image class="top" src="../../images/测评.png" bindtap="handlerule"></image>规则
+  </button>
+</view>
+<!-- 轮播图 -->
+<swiper indicator-dots="true" autoplay="true" interval="2000" circular="true">
+  <swiper-item>
+    <image mode="widthFix" src="../../images/1.png" style="width: 750rpx; height: 230rpx; display: inline-block; box-sizing: border-box"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../images/2.png" style="width: 750rpx; height: 286rpx; display: inline-block; box-sizing: border-box"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../images/3.png" style="width: 750rpx; height: 286rpx; display: inline-block; box-sizing: border-box"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../images/4.png" style="width: 750rpx; height: 286rpx; display: inline-block; box-sizing: border-box"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../images/5.png" style="width: 750rpx; height: 286rpx; display: inline-block; box-sizing: content-box"></image>
+  </swiper-item>
+  <swiper-item>
+    <image mode="widthFix" src="../../images/6.png" style="width: 750rpx; height: 286rpx; display: inline-block; box-sizing: border-box"></image>
+  </swiper-item>
+</swiper>
+<!-- 文字标签 -->
+<text class="textstyle1" style="width: 750rpx; height: 42rpx; display: block; box-sizing: border-box; position: relative; left: 1rpx; top: 90rpx">{{str}}</text>
+<text class="textstyle2" style="position: relative; left: 0rpx; top: 70rpx">房间人数: {{pnum}}</text>
+<text class="textstyle2" style="position: relative; left: 0rpx; top: 50rpx">每人骰子次数：{{pcnt}}</text>
+<!-- 开始按钮 -->
+<navigator url="../game/game" class="nav">
+  <button style="width: 300rpx; position: relative; left: 1rpx; top: -228rpx" class="begin">开始博饼</button>
+</navigator>
